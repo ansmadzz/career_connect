@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CareerConnect — your smart job search and career management workspace.">
+  <title>CareerConnect | Find Your Future</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <section id="loginPage" class="auth-page login-page">
+    <div class="login-layout">
+
+      <div class="login-panel">
+        <a class="auth-brand login-brand" href="#">
+          <span class="brand-mark"><i class="bi bi-briefcase-fill"></i></span>
+          <span>Career<span>Connect</span></span>
+        </a>
+
+        <div class="login-content">
+          <span class="login-kicker"><span class="kicker-dot"></span> YOUR CAREER JOURNEY STARTS HERE</span>
+          <h1>Welcome back.</h1>
+          <p class="login-intro">Sign in to continue building your future. Your next opportunity is closer than you think.</p>
+
+          <form id="loginForm" class="login-form">
+            <label class="form-label" for="loginEmail">Email address</label>
+            <div class="input-icon mb-4">
+              <i class="bi bi-envelope"></i>
+              <input type="email" id="loginEmail" class="form-control" placeholder="name@example.com" autocomplete="email" required>
+            </div>
+
+            <label class="form-label mb-2" for="loginPassword">Password</label>
+            <div class="input-icon">
+              <i class="bi bi-lock"></i>
+              <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" autocomplete="current-password" required>
+              <button type="button" class="password-toggle" data-toggle-password="loginPassword" aria-label="Show password">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+
+            <div id="loginError" class="form-error" role="alert"></div>
+            <button class="btn btn-primary login-submit w-100" type="submit">
+              Sign in <i class="bi bi-arrow-right ms-2"></i>
+            </button>
+          </form>
+
+          <div class="login-register">
+            <span>Don't have an account?</span>
+            <button type="button" id="showRegister">Create an account <i class="bi bi-arrow-up-right"></i></button>
+          </div>
+        </div>
+
+        <div class="login-bottom">
+          <span>© 2026 CareerConnect</span>
+          <span><i class="bi bi-shield-check me-1"></i> A smarter way to shape your career</span>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE ANIMATED PANEL -->
+      <div class="login-visual" aria-label="Career growth illustration">
+        <div class="visual-glow visual-glow-one"></div>
+        <div class="visual-glow visual-glow-two"></div>
+
+        <div class="visual-topline">
+          <span>CAREER DEVELOPMENT PLATFORM</span>
+          <span><i class="bi bi-circle-fill"></i> BUILT FOR YOUR NEXT STEP</span>
+        </div>
+
+        <div class="visual-copy">
+          <span class="visual-eyebrow">DREAM BIG. MOVE FORWARD.</span>
+          <h2>Your potential<br>has <em>no limits.</em></h2>
+          <p>Discover meaningful opportunities, organise your applications and take control of your professional journey.</p>
+        </div>
+
+        <div class="career-illustration">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="orbit orbit-c"></div>
+
+          <div class="floating-star star-one"><i class="bi bi-stars"></i></div>
+          <div class="floating-star star-two"><i class="bi bi-sparkle"></i></div>
+
+          <div class="growth-card">
+            <div class="growth-card-head">
+              <span class="growth-icon"><i class="bi bi-graph-up-arrow"></i></span>
+              <span class="growth-tag">YOUR PROGRESS</span>
+            </div>
+            <div class="growth-title">Every step counts.</div>
+            <div class="growth-subtitle">Keep moving towards your goals</div>
+            <div class="growth-chart">
+              <span style="--bar-height:34%"></span>
+              <span style="--bar-height:48%"></span>
+              <span style="--bar-height:42%"></span>
+              <span style="--bar-height:65%"></span>
+              <span style="--bar-height:58%"></span>
+              <span style="--bar-height:82%"></span>
+              <span style="--bar-height:100%"></span>
+            </div>
+            <div class="growth-foot">
+              <span>YOUR JOURNEY</span>
+              <strong>UPWARD <i class="bi bi-arrow-up-right"></i></strong>
+            </div>
+          </div>
+
+          <div class="floating-note note-one">
+            <span class="note-icon"><i class="bi bi-briefcase"></i></span>
+            <span><strong>New opportunities</strong><small>Find your next role</small></span>
+            <i class="bi bi-arrow-up-right note-arrow"></i>
+          </div>
+
+          <div class="floating-note note-two">
+            <span class="note-check"><i class="bi bi-check-lg"></i></span>
+            <span><strong>Stay organised</strong><small>Track every application</small></span>
+          </div>
+
+          <div class="illustration-base"></div>
+        </div>
+
+        <div class="visual-footer">
+          <span>FIND THE ROLE THAT MOVES YOU.</span>
+          <div><i class="bi bi-circle-fill"></i><i class="bi bi-circle-fill"></i><i class="bi bi-circle-fill"></i></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REGISTER PAGE -->
+  <section id="registerPage" class="auth-page d-none">
+    <div class="auth-shell">
+      <div class="auth-brand">
+        <span class="brand-mark"><i class="bi bi-briefcase-fill"></i></span>
+        <span>Career<span>Connect</span></span>
+      </div>
+
+      <div class="auth-container">
+        <div class="auth-icon"><i class="bi bi-person-plus"></i></div>
+        <h1>Create your account</h1>
+        <p class="auth-subtitle">Build your profile and discover opportunities.</p>
+
+        <form id="registerForm">
+          <label class="form-label" for="registerName">Full name</label>
+          <input type="text" id="registerName" class="form-control mb-3" placeholder="Your full name" required>
+
+          <label class="form-label" for="registerEmail">Email address</label>
+          <input type="email" id="registerEmail" class="form-control mb-3" placeholder="you@example.com" required>
+
+          <label class="form-label" for="registerPassword">Password</label>
+          <input type="password" id="registerPassword" class="form-control mb-2" placeholder="At least 6 characters" minlength="6" required>
+
+          <div id="registerError" class="form-error" role="alert"></div>
+          <button class="btn btn-primary w-100 mt-3" type="submit">Create account <i class="bi bi-arrow-right ms-1"></i></button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN APPLICATION -->
+  <div id="mainApplication" class="app-layout d-none">
+
+    <aside id="sidebar" class="sidebar">
+      <a class="sidebar-brand" href="#">
+        <span class="brand-mark"><i class="bi bi-briefcase-fill"></i></span>
+        <span>Career<span>Connect</span></span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+
+      <nav class="nav flex-column sidebar-nav">
+        <a href="#" class="nav-link active" data-page="dashboard"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+        <a href="#" class="nav-link" data-page="jobs"><i class="bi bi-search"></i> Find jobs <span class="nav-count" id="jobNavCount">6</span></a>
+        <a href="#" class="nav-link" data-page="applications"><i class="bi bi-send"></i> Applications</a>
+        <a href="#" class="nav-link" data-page="saved"><i class="bi bi-bookmark"></i> Saved jobs</a>
+        <a href="#" class="nav-link" data-page="resume"><i class="bi bi-file-earmark-person"></i> Resume builder</a>
+        <a href="#" class="nav-link" data-page="interviews"><i class="bi bi-calendar2-week"></i> Interviews</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip">
+          <i class="bi bi-lightbulb"></i>
+          <strong>Career tip</strong>
+          <p>Tailor your resume to each role to make your application stand out.</p>
+        </div>
+        <button id="logoutButton" class="btn logout-btn"><i class="bi bi-box-arrow-left me-2"></i>Log out</button>
+      </div>
+    </aside>
+
+    <main id="mainContent" class="main-content">
+      <header class="top-header">
+        <div class="d-flex align-items-center gap-3">
+          <button id="menuToggle" class="btn icon-btn" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+          <div>
+            <div class="header-eyebrow">CAREER WORKSPACE</div>
+            <h6 class="mb-0" id="headerPageTitle">Dashboard</h6>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <button class="btn icon-btn notification-btn" title="Notifications"><i class="bi bi-bell"></i><span></span></button>
+          <div class="user-chip">
+            <div class="avatar" id="userAvatar">U</div>
+            <div><strong id="headerUserName">User</strong><small>Job seeker</small></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+
+        <!-- DASHBOARD -->
+        <section id="dashboardPage" class="content-page">
+          <div class="welcome-banner">
+            <div>
+              <span class="eyebrow-light">YOUR CAREER AT A GLANCE</span>
+              <h1>Good to see you, <span id="welcomeName">there</span>!</h1>
+              <p>Keep moving forward. Your next opportunity could be one application away.</p>
+              <button class="btn btn-light btn-sm" data-go="jobs">Explore opportunities <i class="bi bi-arrow-up-right ms-1"></i></button>
+            </div>
+            <div class="welcome-art">
+              <i class="bi bi-rocket-takeoff"></i>
+              <span class="art-orbit orbit-one"></span>
+              <span class="art-orbit orbit-two"></span>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <div><h2>Overview</h2><p>Here is how your job search is progressing.</p></div>
+            <span class="date-pill"><i class="bi bi-calendar3 me-2"></i><span id="todayDate"></span></span>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-xl-3"><div class="metric-card"><div class="metric-top"><span>Total applications</span><span class="metric-icon mauve"><i class="bi bi-send"></i></span></div><h3 id="totalApplications">0</h3><small>Jobs you have applied for</small></div></div>
+            <div class="col-6 col-xl-3"><div class="metric-card"><div class="metric-top"><span>Interviews</span><span class="metric-icon green"><i class="bi bi-calendar-check"></i></span></div><h3 id="totalInterviews">0</h3><small>Scheduled interviews</small></div></div>
+            <div class="col-6 col-xl-3"><div class="metric-card"><div class="metric-top"><span>Available jobs</span><span class="metric-icon amber"><i class="bi bi-briefcase"></i></span></div><h3 id="totalJobs">0</h3><small>Opportunities to explore</small></div></div>
+            <div class="col-6 col-xl-3"><div class="metric-card"><div class="metric-top"><span>Saved jobs</span><span class="metric-icon blue"><i class="bi bi-bookmark-heart"></i></span></div><h3 id="totalSaved">0</h3><small>Roles on your shortlist</small></div></div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-xl-7">
+              <div class="panel-card h-100">
+                <div class="panel-heading"><div><h5>Application activity</h5><p>Applications submitted over the year</p></div><span class="subtle-label">THIS YEAR</span></div>
+                <div class="chart-wrap"><canvas id="applicationsChart"></canvas></div>
+              </div>
+            </div>
+            <div class="col-xl-5">
+              <div class="panel-card h-100">
+                <div class="panel-heading"><div><h5>Application status</h5><p>Current progress breakdown</p></div></div>
+                <div class="chart-wrap doughnut-wrap"><canvas id="statusChart"></canvas></div>
+              </div>
+            </div>
+            <div class="col-xl-7">
+              <div class="panel-card">
+                <div class="panel-heading"><div><h5>Recent applications</h5><p>Your latest job application activity</p></div><button class="btn btn-link btn-sm" data-go="applications">View all <i class="bi bi-arrow-right"></i></button></div>
+                <div class="table-responsive">
+                  <table class="table align-middle">
+                    <thead><tr><th>POSITION</th><th>COMPANY</th><th>DATE</th><th>STATUS</th></tr></thead>
+                    <tbody id="recentApplications"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5">
+              <div class="panel-card">
+                <div class="panel-heading"><div><h5>Upcoming interviews</h5><p>Be ready for your next conversation</p></div><button class="btn btn-link btn-sm" data-go="interviews">Manage</button></div>
+                <div id="dashboardInterviews" class="compact-list"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- JOBS -->
+        <section id="jobsPage" class="content-page d-none">
+          <div class="page-intro">
+            <div><span class="eyebrow">OPPORTUNITIES</span><h1>Find your next role</h1><p>Explore roles that match your interests, skills and ambitions.</p></div>
+            <span class="result-count" id="jobResultCount">6 opportunities</span>
+          </div>
+
+          <div class="search-panel">
+            <div class="row g-2 align-items-end">
+              <div class="col-lg-4">
+                <label class="form-label" for="jobSearch">Search keywords</label>
+                <div class="input-icon"><i class="bi bi-search"></i><input type="search" id="jobSearch" class="form-control" placeholder="Job title, company, skill or task"></div>
+              </div>
+              <div class="col-sm-6 col-lg-2">
+                <label class="form-label" for="departmentFilter">Department</label>
+                <select id="departmentFilter" class="form-select">
+                  <option value="">All departments</option>
+                  <option>Information Technology</option>
+                  <option>Design & Creative</option>
+                  <option>Marketing</option>
+                  <option>Media & Communications</option>
+                  <option>Finance</option>
+                  <option>Human Resources</option>
+                  <option>Marketing & Creative</option>
+                  <option>Marketing & Communications</option>
+                  <option>Sales</option>
+                  <option>Sales & Business Development</option>
+                  <option>Retail</option>
+                  <option>Administration</option>
+                  <option>Customer Service</option>
+                  <option>Education</option>
+                  <option>Education & Training</option>
+                  <option>Healthcare</option>
+                  <option>Healthcare Administration</option>
+                  <option>Engineering</option>
+                  <option>Engineering & Construction</option>
+                  <option>Manufacturing</option>
+                  <option>Logistics & Supply Chain</option>
+                  <option>Procurement</option>
+                  <option>Hospitality & Tourism</option>
+                  <option>Events & Hospitality</option>
+                  <option>Food & Beverage</option>
+                  <option>Legal</option>
+                  <option>Legal & Compliance</option>
+                  <option>Design & Architecture</option>
+                  <option>Creative & Media</option>
+                  <option>Research & Development</option>
+                  <option>Environment & Sustainability</option>
+                  <option>Insurance</option>
+                  <option>Property & Real Estate</option>
+                </select>
+              </div>
+              <div class="col-sm-6 col-lg-2">
+                <label class="form-label" for="locationFilter">Location</label>
+                <select id="locationFilter" class="form-select">
+                  <option value="">All locations</option><option>Kuala Lumpur</option><option>Petaling Jaya</option><option>Shah Alam</option><option>Cyberjaya</option><option>Remote</option>
+                </select>
+              </div>
+              <div class="col-sm-6 col-lg-2">
+                <label class="form-label" for="typeFilter">Job type</label>
+                <select id="typeFilter" class="form-select">
+                  <option value="">All types</option><option>Full-time</option><option>Internship</option><option>Part-time</option><option>Contract</option>
+                </select>
+              </div>
+              <div class="col-sm-6 col-lg-2"><button id="clearFilters" class="btn btn-outline-secondary w-100"><i class="bi bi-arrow-counterclockwise me-1"></i>Reset</button></div>
+            </div>
+          </div>
+          <div id="jobListings" class="row g-3 mt-1"></div>
+        </section>
+
+        <!-- APPLICATIONS -->
+        <section id="applicationsPage" class="content-page d-none">
+          <div class="page-intro"><div><span class="eyebrow">YOUR PROGRESS</span><h1>My applications</h1><p>Keep track of every opportunity you have pursued.</p></div></div>
+          <div class="panel-card">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+              <div><h5 class="mb-1">Application tracker</h5><p class="panel-description mb-0">Update a status as you move through the hiring process.</p></div>
+              <select id="applicationFilter" class="form-select filter-select">
+                <option value="">All statuses</option><option>Applied</option><option>Under Review</option><option>Interview</option><option>Offered</option><option>Rejected</option>
+              </select>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead><tr><th>JOB POSITION</th><th>COMPANY</th><th>DATE APPLIED</th><th>STATUS</th><th></th></tr></thead>
+                <tbody id="applicationTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SAVED JOBS -->
+        <section id="savedPage" class="content-page d-none">
+          <div class="page-intro"><div><span class="eyebrow">YOUR SHORTLIST</span><h1>Saved jobs</h1><p>Keep interesting opportunities in one place and apply when you are ready.</p></div></div>
+          <div id="savedListings" class="row g-3"></div>
+        </section>
+
+        <!-- RESUME BUILDER -->
+        <section id="resumePage" class="content-page d-none">
+          <div class="page-intro">
+            <div><span class="eyebrow">YOUR PERSONAL BRAND</span><h1>Resume builder</h1><p>Create a simple professional profile and preview it before printing.</p></div>
+            <button id="printResume" class="btn btn-outline-primary"><i class="bi bi-printer me-2"></i>Print / Save PDF</button>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-lg-7">
+              <div class="panel-card">
+                <div class="panel-heading"><div><h5>Personal information</h5><p>Complete the details below to build your resume.</p></div></div>
+                <form id="resumeForm">
+                  <div class="row g-3">
+                    <div class="col-md-6"><label class="form-label">Full name</label><input id="resumeName" class="form-control" placeholder="Your full name" required></div>
+                    <div class="col-md-6"><label class="form-label">Email</label><input id="resumeEmail" type="email" class="form-control" placeholder="you@example.com"></div>
+                    <div class="col-12"><label class="form-label">Professional title</label><input id="resumeTitle" class="form-control" placeholder="e.g. Information Systems Student"></div>
+                    <div class="col-12"><label class="form-label">Professional summary</label><textarea id="resumeSummary" class="form-control" rows="4" placeholder="Write a short introduction about your experience and career goals."></textarea></div>
+                    <div class="col-12"><label class="form-label">Skills</label><textarea id="resumeSkills" class="form-control" rows="3" placeholder="HTML, CSS, JavaScript, Communication..."></textarea><div class="form-text">Separate each skill with a comma.</div></div>
+                    <div class="col-12"><label class="form-label">Education</label><textarea id="resumeEducation" class="form-control" rows="3" placeholder="Qualification, institution and year"></textarea></div>
+                    <div class="col-12"><label class="form-label">Work experience / Projects</label><textarea id="resumeExperience" class="form-control" rows="4" placeholder="Describe relevant work, internship or academic projects."></textarea></div>
+                  </div>
+                  <button class="btn btn-primary mt-4" type="submit"><i class="bi bi-check2-circle me-2"></i>Save resume</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="resume-preview" id="resumePreview">
+                <div class="resume-preview-top"><span>LIVE PREVIEW</span><i class="bi bi-file-earmark-person"></i></div>
+                <div class="resume-paper">
+                  <h2 id="previewName">Your Name</h2>
+                  <h6 id="previewTitle">Professional Title</h6>
+                  <p id="previewEmail" class="preview-contact">your.email@example.com</p>
+                  <hr>
+                  <h6>PROFILE</h6><p id="previewSummary">Your professional summary will appear here.</p>
+                  <h6>KEY SKILLS</h6><p id="previewSkills">Your skills will appear here.</p>
+                  <h6>EDUCATION</h6><p id="previewEducation">Your education details will appear here.</p>
+                  <h6>EXPERIENCE & PROJECTS</h6><p id="previewExperience">Your experience and projects will appear here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTERVIEWS -->
+        <section id="interviewsPage" class="content-page d-none">
+          <div class="page-intro"><div><span class="eyebrow">NEXT BIG STEP</span><h1>Interview planner</h1><p>Organise your interviews and stay prepared.</p></div></div>
+
+          <div class="row g-3">
+            <div class="col-lg-5">
+              <div class="panel-card">
+                <div class="panel-heading"><div><h5>Add an interview</h5><p>Save the date and details of your meeting.</p></div></div>
+                <form id="interviewForm">
+                  <label class="form-label">Company</label>
+                  <input id="interviewCompany" class="form-control mb-3" placeholder="Company name" required>
+                  <label class="form-label">Position</label>
+                  <input id="interviewPosition" class="form-control mb-3" placeholder="Job position" required>
+                  <div class="row g-2">
+                    <div class="col-7"><label class="form-label">Date</label><input type="date" id="interviewDate" class="form-control" required></div>
+                    <div class="col-5"><label class="form-label">Time</label><input type="time" id="interviewTime" class="form-control" required></div>
+                  </div>
+                  <label class="form-label mt-3">Notes (optional)</label>
+                  <textarea id="interviewNotes" class="form-control" rows="3" placeholder="Online meeting link, contact person, things to prepare..."></textarea>
+                  <button class="btn btn-primary w-100 mt-4" type="submit"><i class="bi bi-plus-lg me-2"></i>Add interview</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="panel-card h-100">
+                <div class="panel-heading">
+                  <div><h5>Your interview schedule</h5><p>Upcoming and past interviews in one view.</p></div>
+                  <span class="subtle-label" id="interviewCount">0 SCHEDULED</span>
+                </div>
+                <div id="interviewList" class="interview-list"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <span>© 2026 CareerConnect. All rights reserved.</span>
+          <span>Designed to move your career forward <i class="bi bi-heart-fill"></i></span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- TOAST MESSAGE -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="appToast" class="toast border-0" role="status">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage">Saved successfully.</div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
